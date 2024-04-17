@@ -27,6 +27,9 @@ export class DfpService {
     return this.$events.asObservable();
   }
 
+  beforeDisplay?: (slots: Array<googletag.Slot>) => void;
+  disableRefreshSlots = false;
+
   constructor(
     @Inject(PLATFORM_ID) private platformId: object,
     @Inject(DOCUMENT) private document: Document,
@@ -50,6 +53,10 @@ export class DfpService {
         ),
       )
       .subscribe((acts) => {
+        if (this.beforeDisplay && typeof this.beforeDisplay === 'function') {
+          this.beforeDisplay(acts.map(act => act.slot));
+        }
+
         const refreshSlots: googletag.Slot[] = [];
         acts.forEach((act) => {
           if (act instanceof DisplaySlot) {
@@ -62,7 +69,7 @@ export class DfpService {
             refreshSlots.push(act.slot);
           }
         });
-        if (refreshSlots.length > 0) {
+        if (refreshSlots.length > 0 && !this.disableRefreshSlots) {
           googletag.pubads().refresh(refreshSlots);
         }
       });
