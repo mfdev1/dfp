@@ -1,0 +1,11 @@
+/*
+ * Public API Surface of dfp
+ */
+globalThis.googletag = globalThis.googletag || { cmd: [] };
+export * from './lib/consts';
+export * from './lib/events';
+export * from './lib/types';
+export { DfpService } from './lib/dfp.service';
+export { DfpModule } from './lib/dfp.module';
+export { DfpAdDirective } from './lib/dfp-ad.directive';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9wdWJsaWMtYXBpLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztHQUVHO0FBRUgsVUFBVSxDQUFDLFNBQVMsR0FBRyxVQUFVLENBQUMsU0FBUyxJQUFJLEVBQUUsR0FBRyxFQUFFLEVBQUUsRUFBRSxDQUFDO0FBRTNELGNBQWMsY0FBYyxDQUFDO0FBQzdCLGNBQWMsY0FBYyxDQUFDO0FBQzdCLGNBQWMsYUFBYSxDQUFDO0FBQzVCLE9BQU8sRUFBRSxVQUFVLEVBQUUsTUFBTSxtQkFBbUIsQ0FBQztBQUMvQyxPQUFPLEVBQUUsU0FBUyxFQUFFLE1BQU0sa0JBQWtCLENBQUM7QUFDN0MsT0FBTyxFQUFFLGNBQWMsRUFBRSxNQUFNLHdCQUF3QixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLypcbiAqIFB1YmxpYyBBUEkgU3VyZmFjZSBvZiBkZnBcbiAqL1xuXG5nbG9iYWxUaGlzLmdvb2dsZXRhZyA9IGdsb2JhbFRoaXMuZ29vZ2xldGFnIHx8IHsgY21kOiBbXSB9O1xuXG5leHBvcnQgKiBmcm9tICcuL2xpYi9jb25zdHMnO1xuZXhwb3J0ICogZnJvbSAnLi9saWIvZXZlbnRzJztcbmV4cG9ydCAqIGZyb20gJy4vbGliL3R5cGVzJztcbmV4cG9ydCB7IERmcFNlcnZpY2UgfSBmcm9tICcuL2xpYi9kZnAuc2VydmljZSc7XG5leHBvcnQgeyBEZnBNb2R1bGUgfSBmcm9tICcuL2xpYi9kZnAubW9kdWxlJztcbmV4cG9ydCB7IERmcEFkRGlyZWN0aXZlIH0gZnJvbSAnLi9saWIvZGZwLWFkLmRpcmVjdGl2ZSc7XG4iXX0=
